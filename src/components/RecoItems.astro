@@ -1,19 +1,46 @@
+---
+const products = [
+  {
+    name: 'Revolution 5 PRO',
+    price: '299.99 €',
+    image: '/demonacon/rev5pro.png',
+    url: 'https://naconespana.es/productos/revolution5pro/',
+  },
+  {
+    name: 'RIG 800 PRO',
+    price: '299.99 €',
+    image: '/demonacon/rig800.webp',
+    url: 'https://naconespana.es/productos/rig800/',
+  },
+];
+---
+
 <section
-  class="w-full h-auto flex flex-col items-center justify-center gap-12 pt-16 pb-10 md:pt-24"
+  class="w-full h-auto flex flex-col items-center justify-center gap-12 pt-12 pb-10 md:pt-24"
 >
   <h2 class="pt-3 text-xl md:text-3xl font-bold tracking-wide px-5">
     ¡BUENOS MATCH PARA TU SILLA!
   </h2>
 
   <article class="flex flex-col gap-8">
-    <div class="flex flex-col items-center">
-      <img src="/demonacon/rev5pro.png" alt="Revolution 5 PRO" class="w-1/2" />
-      <p class="text-lg font-semibold">Revolution 5 PRO</p>
-    </div>
+    {
+      products.map((product) => {
+        return (
+          <div class="flex flex-col items-center">
+            <img src={product.image} alt={product.name} class="w-1/2" />
+            <p class="text-xl uppercase font-bold">{product.name}</p>
 
-    <div class="flex flex-col items-center">
-      <img src="/demonacon/rig800.webp" alt="RIG 800 PRO" class="w-1/2" />
-      <p class="text-lg font-semibold">RIG 800 PRO</p>
-    </div>
+            <div class="grid grid-cols-2 pt-3">
+              <p class="font-semibold text-lg">{product.price}</p>
+              <button class="bg-gray-200 text-gray-950 px-4 rounded-lg font-bold">
+                <a href={product.url} target="_blank">
+                  Comprar
+                </a>
+              </button>
+            </div>
+          </div>
+        );
+      })
+    }
   </article>
 </section>

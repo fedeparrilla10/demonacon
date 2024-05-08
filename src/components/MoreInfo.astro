@@ -1,0 +1,42 @@
+---
+const bigButtons = [
+  {
+    id: 1,
+    title: 'INSTRUCCIONES',
+    icon: '/demonacon/pdf.svg',
+  },
+  {
+    id: 2,
+    title: 'AFTERCARE',
+    icon: '/demonacon/manual.svg',
+  },
+  {
+    id: 3,
+    title: 'DEMOSTRACIÓN',
+    icon: '/demonacon/video.svg',
+  },
+];
+---
+
+<section
+  class="w-full flex flex-col items-center justify-center gap-12 pt-16 pb-10 md:pt-24"
+>
+  <h2 class="text-2xl px-4 text-center font-bold">
+    Más información sobre tu <span class="text-cyan-200">SecretLab</span>
+  </h2>
+
+  <article class="w-full px-4 flex flex-col gap-4 md:items-center">
+    {
+      bigButtons.map((btn) => {
+        return (
+          <div class="grid grid-cols-[85%_15%] md:grid-cols-[90%_10%] items-center bg-gradient-to-r from-slate-200 to-gray-100 p-2 rounded-2xl md:w-1/4 md:justify-center cursor-pointer">
+            <h4 class="text-lg text-black font-semibold tracking-wide">
+              {btn.title}
+            </h4>
+            <img src={btn.icon} alt="" class="w-12" />
+          </div>
+        );
+      })
+    }
+  </article>
+</section>

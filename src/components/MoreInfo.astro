@@ -29,7 +29,7 @@ const bigButtons = [
     {
       bigButtons.map((btn) => {
         return (
-          <div class="grid grid-cols-[85%_15%] md:grid-cols-[90%_10%] items-center bg-hero-pattern bg-cover p-2 rounded-2xl md:w-1/4 md:justify-center cursor-pointer font-mono border border-white border-opacity-10">
+          <div class="grid grid-cols-[85%_15%] md:grid-cols-[90%_10%] items-center bg-nacon p-2 rounded-2xl md:w-1/4 md:justify-center cursor-pointer font-mono border border-white border-opacity-10">
             <h4 class="text-lg text-gray-100 font-semibold tracking-wider pl-4">
               {btn.title}
             </h4>
@@ -40,3 +40,10 @@ const bigButtons = [
     }
   </article>
 </section>
+
+<style>
+  .bg-nacon {
+    background-image: url('/demonacon/fondon2.png');
+    background-size: cover;
+  }
+</style>

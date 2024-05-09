@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/demonacon/fondon2.png')",
+        'hero-pattern': "url('/public/fondon2.png')",
       },
     },
   },
